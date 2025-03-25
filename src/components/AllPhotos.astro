@@ -1,0 +1,52 @@
+---
+// in app.styudyraid.com
+import { parseFromString } from 'dom-parser';
+
+// const response = await fetch('http://localhost:3001/api/people')
+const URI = 'http://localhost:3000/';
+const PATH = 'user/';
+const id = '67e2d082eeac3c38089743c4'
+
+
+const response = await fetch(URI + PATH + id)
+// console.log("before sending response.json()")
+// const data = await response.json()
+const data = await response.text()
+
+const dom = parseFromString(data)
+console.log(typeof(data))
+console.log(typeof(dom))
+
+---
+
+
+  <div>
+    <h1>GET one record</h1>
+    <form action="http://localhost:3000/user/67e2d082eeac3c38089743c4" method="get">
+      <div class="mt-6 flex items-center justify-end gap-x-6">
+
+        <button type="submit" value="Submit using GET"
+          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">GET
+          one /api/users/67e2d082eeac3c38089743c4</button>
+      </div>
+    </form>
+  </div>
+<br> <br> <hr>
+<h1>This is photos  using astro as middleware</h1>
+
+<div id="'fordata">
+  {dom}
+</div>
+	<!-- <ul>
+	  <li id="title">
+			  NAME   |     Email   |   password
+		  </li>
+	  {
+		  
+		data.map((person) => (
+		  <li id={person.name}>
+			{person._id}  {person.name}  |  {person.email}  |  {person.hashed_password} |  | {person.photo}
+		  </li>
+		))
+	  }
+	</ul> -->

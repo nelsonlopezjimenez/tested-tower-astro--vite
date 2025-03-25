@@ -1,0 +1,59 @@
+---
+import { imageConfig } from "astro:assets"
+
+// const response = await fetch('http://localhost:3001/api/people')
+const response = await fetch('http://localhost:3000/api/users')
+console.log("before sending response.json()")
+const data = await response.json()
+let image;
+
+---
+<div>
+    <h1>GET all records</h1>
+    <form action="http://localhost:3000/api/users" method="get">
+      <div class="mt-6 flex items-center justify-end gap-x-6">
+
+        <button type="submit" value="Submit using GET"
+          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">GET
+          ALL /api/users</button>
+
+
+      </div>
+    </form>
+  </div>
+
+  <div>
+    <h1>GET one record</h1>
+    <form action="http://localhost:3000/api/users/67e2d082eeac3c38089743c4" method="get">
+      <div class="mt-6 flex items-center justify-end gap-x-6">
+
+        <button type="submit" value="Submit using GET"
+          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">GET
+          one /api/users/67e2d082eeac3c38089743c4</button>
+      </div>
+    </form>
+  </div>
+<br> <br> <hr>
+<h1>This is the output using astro as middleware</h1>
+<img src="" alt="" srcset="">
+	<ul class="bg-gray-300">
+	  <li id="title">
+			  NAME   |     Email   |   password
+		  </li>
+	  {
+		  
+		data.map((person) => (
+      
+		  <li id={person.name}>
+			<span class=" text-white">{person._id}  </span>{person.name}  |  {person.email}  |   |  |====== <img src={person.photo.contentType} alt={person.photo.contentType}/>
+      </li>
+
+		))
+	  }
+	</ul>
+<!-- 
+  "photo": {
+    "contentType": "image/jpeg",
+    "data": {
+      "$binary": {
+        "base64": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/CABEI -->

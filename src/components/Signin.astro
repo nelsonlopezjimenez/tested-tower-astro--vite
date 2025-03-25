@@ -1,0 +1,53 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+---
+
+
+
+
+
+  <div class="border-b  ">
+    <!-- <form action="http://localhost:3000/api/users/" method="get"> -->
+
+      <form action="http://localhost:3000/auth/signin" method="post">
+      <div class="flex border-b border-gray-900/10 pb-12 w-100 mx-auto">
+        <!--  -->
+        <div class="text-base/7 font-semibold text-gray-900 ">
+            <h2 class="w-full border-b">Sign In</h2>
+        </div>
+
+
+        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols.-6">
+          <div class="sm:col-span-3">
+            <label for="name" class="block text-sm/6 font-medium text-gray-900">Name</label>
+            <div class="mt-2">
+              <input type="text" name="name" id="name" autocomplete="name"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+            </div>
+          </div>
+
+
+          <div class="sm:col-span-4">
+            <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
+            <div class="mt-2">
+              <input id="email" name="email" type="email" autocomplete="email"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+            </div>
+          </div>
+
+          <div class="sm:col-span-4">
+            <label for="password" class="block text-sm/6 font-medium text-gray-900">Password</label>
+            <div class="mt-2">
+              <input id="password" name="password" type="password" autocomplete="password"
+                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+            </div>
+          </div>
+          <div class="mt-6 flex items-center justify-end gap-x-6">
+           
+           
+            <button type="submit" formmethod="post" value="Submit using POST"
+              class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+          </div>
+    </form>
+  </div>

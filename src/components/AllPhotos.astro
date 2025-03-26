@@ -4,58 +4,22 @@ const response = await fetch('http://localhost:3000/api/users')
 const data = await response.json()
 --- 
 <style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {background-color: #f2f2f2;}
-  </style>
-<h1>AS TABLE</h1>
-
-<div style="overflow-x: auto">
-  <table>
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Password</th>
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <th>Image</th>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Password</th>
-      </tr>
-  </tfoot>
-    <tbody>
+  span {border: 3px red solid}
+</style>
+<ul class="pt-6" >
       {
-        
-        data.map((person) => (
-          
-        <tr>
-          <td><img src={`data:${person.photo.contentType};base64, ${Buffer.from(person.photo.data.data, 'binary').toString('base64')}`} alt={person.photo.contentType} width="80px"/></td>
-          <td>{person._id}</td>
-          <td>{person.name}</tr>  
-          <td>{person.email}</td>
-        </tr>
-    
+        data.map((person) => (   
+
+          <li class="flex-col pt-3 pb-3 text-lg sm:pl-10 md:flex  hover:bg-indigo-500 font-semibold border-[2vw] justify-items-center ">
+            <img class="border-[1vw] " src={`data:${person.photo.contentType};base64, ${Buffer.from(person.photo.data.data, 'binary').toString('base64')}`} alt={person.photo.contentType} width="80px"/>
+          <span class="m-2">{person._id}</span>         
+          <span class="m-2">{person.name}</span> 
+          <span class="m-2">{person.email}</span>
+          </li>
         ))
-        }
-        
-    </tbody>
-  </table>
-</div>
+      }
+ </ul>
+ <!-- https://nerdcave.com/tailwind-cheat-sheet -->
 
 
 	

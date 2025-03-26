@@ -2,10 +2,10 @@
 
 ## 3.26.2025 
 
-![all users](<2025-03-26 14.43.51.png>)
-![signup](</tested-tower/public/2025-03-26 15.01.13.png>)
-![signin](</tested-tower/public/2025-03-26 15.00.09.png>)
-![reponsive](</tested-tower/public/2025-03-26 15.00.36.png>)
+![all users](<./public/2025-03-26 14.43.51.png>)
+![signup](<./public/2025-03-26 15.01.13.png>)
+![signin](<./public/2025-03-26 15.00.09.png>)
+![reponsive](<./public/2025-03-26 15.00.36.png>)
 
 ## Working mobile-first
 Tailwind uses a mobile-first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap.

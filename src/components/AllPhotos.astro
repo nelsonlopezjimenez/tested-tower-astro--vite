@@ -2,20 +2,16 @@
 // in app.styudyraid.com
 import { parseFromString } from 'dom-parser';
 
+
 // const response = await fetch('http://localhost:3001/api/people')
 const URI = 'http://localhost:3000/';
-const PATH = 'user/';
+const PATH = 'api/users/photo/';
 const id = '67e2d082eeac3c38089743c4'
 
 
 const response = await fetch(URI + PATH + id)
 // console.log("before sending response.json()")
-// const data = await response.json()
-const data = await response.text()
-
-const dom = parseFromString(data)
-console.log(typeof(data))
-console.log(typeof(dom))
+const data = await response.a
 
 ---
 
@@ -35,7 +31,8 @@ console.log(typeof(dom))
 <h1>This is photos  using astro as middleware</h1>
 
 <div id="'fordata">
-  {dom}
+
+
 </div>
 	<!-- <ul>
 	  <li id="title">

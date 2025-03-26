@@ -1,49 +1,57 @@
 ---
-// in app.styudyraid.com
-import { parseFromString } from 'dom-parser';
+const response = await fetch('http://localhost:3000/api/users')
 
+const data = await response.json()
+--- 
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  </style>
+<h1>AS TABLE</h1>
 
-// const response = await fetch('http://localhost:3001/api/people')
-const URI = 'http://localhost:3000/';
-const PATH = 'api/users/photo/';
-const id = '67e2d082eeac3c38089743c4'
-
-
-const response = await fetch(URI + PATH + id)
-// console.log("before sending response.json()")
-const data = await response.a
-
----
-
-
-  <div>
-    <h1>GET one record</h1>
-    <form action="http://localhost:3000/user/67e2d082eeac3c38089743c4" method="get">
-      <div class="mt-6 flex items-center justify-end gap-x-6">
-
-        <button type="submit" value="Submit using GET"
-          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">GET
-          one /api/users/67e2d082eeac3c38089743c4</button>
-      </div>
-    </form>
-  </div>
-<br> <br> <hr>
-<h1>This is photos  using astro as middleware</h1>
-
-<div id="'fordata">
-
-
+<div style="overflow-x: auto">
+  <table>
+    <thead>
+        <tr>Image</tr>
+        <tr>ID</tr>
+        <tr>Name</tr>
+        <tr>Email</tr>
+        <tr>Password</tr>
+    </thead>
+   
+    <tbody>
+      <tr>
+      {
+        
+        data.map((person) => (
+          
+          <tr>{person._id}</tr>
+          <tr>{person.name}</tr>   
+          <tr>{person.email}</tr>
+          <tr><img src={`data:${person.photo.contentType};base64, ${Buffer.from(person.photo.data.data, 'binary').toString('base64')}`} alt={person.photo.contentType} width="80px"/></tr>
+    
+        ))
+        }
+        </tr>
+        <tfoot>
+          <tr>Image</tr>
+          <tr>ID</tr>
+          <tr>Name</tr>
+          <tr>Email</tr>
+          <tr>Password</tr>
+      </tfoot>
+    </tbody>
+  </table>
 </div>
-	<!-- <ul>
-	  <li id="title">
-			  NAME   |     Email   |   password
-		  </li>
-	  {
-		  
-		data.map((person) => (
-		  <li id={person.name}>
-			{person._id}  {person.name}  |  {person.email}  |  {person.hashed_password} |  | {person.photo}
-		  </li>
-		))
-	  }
-	</ul> -->
+
+
+	

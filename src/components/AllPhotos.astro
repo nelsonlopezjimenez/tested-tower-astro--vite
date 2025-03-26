@@ -21,34 +21,38 @@ const data = await response.json()
 <div style="overflow-x: auto">
   <table>
     <thead>
-        <tr>Image</tr>
-        <tr>ID</tr>
-        <tr>Name</tr>
-        <tr>Email</tr>
-        <tr>Password</tr>
-    </thead>
-   
-    <tbody>
       <tr>
+        <th>Image</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>Image</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+  </tfoot>
+    <tbody>
       {
         
         data.map((person) => (
           
-          <tr>{person._id}</tr>
-          <tr>{person.name}</tr>   
-          <tr>{person.email}</tr>
-          <tr><img src={`data:${person.photo.contentType};base64, ${Buffer.from(person.photo.data.data, 'binary').toString('base64')}`} alt={person.photo.contentType} width="80px"/></tr>
+        <tr>
+          <td><img src={`data:${person.photo.contentType};base64, ${Buffer.from(person.photo.data.data, 'binary').toString('base64')}`} alt={person.photo.contentType} width="80px"/></td>
+          <td>{person._id}</td>
+          <td>{person.name}</tr>  
+          <td>{person.email}</td>
+        </tr>
     
         ))
         }
-        </tr>
-        <tfoot>
-          <tr>Image</tr>
-          <tr>ID</tr>
-          <tr>Name</tr>
-          <tr>Email</tr>
-          <tr>Password</tr>
-      </tfoot>
+        
     </tbody>
   </table>
 </div>

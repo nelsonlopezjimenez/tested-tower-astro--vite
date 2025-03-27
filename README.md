@@ -1,5 +1,15 @@
 # README
 
+## 3.27.2025
+
+1. Newsfeed page: selected wrapping div in original version of MERN social and pasted.
+1. Deleted all MUI classes and added tailwind but decided to add original wrapper div, add tailwind classes
+1. Also fixed the problem with the NavbarLi
+1. Started with flex-col, but sm:flex-row never worked.
+1. So change to flex flex-wrap justify-evenly and behavior better.
+1. In previous case I should have changed width of each li to change to sm:flex-row. It need to be tested.
+
+![reponsive](<./public/2025-03-27 12.38.28.png>)
 ## 3.26.2025 
 
 ![all users](<./public/2025-03-26 14.43.51.png>)

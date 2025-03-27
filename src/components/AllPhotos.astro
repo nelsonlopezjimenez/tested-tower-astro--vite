@@ -6,11 +6,11 @@ const data = await response.json()
 <style>
   span {border: 3px red solid}
 </style>
-<ul class="pt-6" >
+<ul class="p-auto mx-auto w-9/12"  >
       {
         data.map((person) => (   
 
-          <li class="flex-col pt-3 pb-3 text-lg sm:pl-10 md:flex  hover:bg-indigo-500 font-semibold border-[2vw] justify-items-center ">
+          <li class="flex-col pt-3 pb-3 text-lg sm:pl-10 md:flex  hover:bg-indigo-500 font-semibold border-[1vw] justify-items-center ">
             <img class="border-[1vw] " src={`data:${person.photo.contentType};base64, ${Buffer.from(person.photo.data.data, 'binary').toString('base64')}`} alt={person.photo.contentType} width="80px"/>
           <span class="m-2">{person._id}</span>         
           <span class="m-2">{person.name}</span> 

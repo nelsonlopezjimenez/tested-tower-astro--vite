@@ -1,0 +1,226 @@
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Web site created using create-react-app">
+  <link rel="apple-touch-icon" href="/logo192.png">
+  <!--
+    manifest.json provides metadata used when your web app is installed on a
+    user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+  -->
+  <link rel="manifest" href="/manifest.json">
+  <!--
+    Notice the use of  in the tags above.
+    It will be replaced with the URL of the `public` folder during the build.
+    Only files inside the `public` folder can be referenced from the HTML.
+
+    Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+    work correctly both with client-side routing and a non-root public URL.
+    Learn how to configure a non-root public URL by running `npm run build`.
+  -->
+  <title>React App</title>
+<script defer="" src="/static/js/bundle.js"></script><style>body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgbWFyZ2luOiAwO1xyXG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcclxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcclxuICAgIHNhbnMtc2VyaWY7XHJcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XHJcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcclxufVxyXG5cclxuY29kZSB7XHJcbiAgZm9udC1mYW1pbHk6IHNvdXJjZS1jb2RlLXBybywgTWVubG8sIE1vbmFjbywgQ29uc29sYXMsICdDb3VyaWVyIE5ldycsXHJcbiAgICBtb25vc3BhY2U7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.recipe-list {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+@media (max-width: 580px) {
+.recipe-list {
+  display: block;
+}
+}
+
+
+
+
+.recipe-card {
+width: 31%;
+min-width: 240px;
+margin: 1%;
+border: 1px solid rgba(160,160,160,0.2);
+background: white;
+border-radius: 0 0 2px 2px;
+box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+
+.recipe-card-content {
+padding: 16px;
+}
+
+
+.recipe-card-image {
+overflow: hidden;
+height: 50%;
+}
+
+.recipe-card img {
+width: 100%;
+max-height: 250px;
+}
+
+.recipe-title {
+margin: 0;
+}
+
+
+
+
+
+
+.recipe-form {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+margin: 10px;
+padding: 15px;
+border-radius: 10px;
+border: 7px solid #2c3e50;
+}
+
+.recipe-form input[type=text] {
+  padding: 5px 8px;
+  box-sizing: border-box;
+}
+
+.recipe-form-line {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+margin-top: 5px;
+}
+
+.recipe-form-line input {
+margin-left: 15px;
+}
+
+.buttons {
+color: white;
+background-color: #2c3e50;
+border-radius: 6px;
+padding: 0 10px 1px 10px;
+margin: 8px 0;
+align-self: flex-end;
+font-size: 1.1em;
+}
+
+.close-button {
+background-color: transparent;
+background-repeat: no-repeat;
+border: none;
+cursor: pointer;
+overflow: hidden;
+font-size: 0.9em;
+color: #777;
+text-shadow: 0 1px 0 #fff;
+align-self: flex-end;
+}
+
+.recipe-form-container {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0U7SUFDRSxjQUFjO0VBQ2hCO0FBQ0Y7Ozs7O0FBS0E7RUFDRSxVQUFVO0VBQ1YsZ0JBQWdCO0VBQ2hCLFVBQVU7RUFDVix1Q0FBdUM7RUFDdkMsaUJBQWlCO0VBQ2pCLDBCQUEwQjtFQUMxQixzR0FBc0c7QUFDeEc7OztBQUdBO0VBQ0UsYUFBYTtBQUNmOzs7QUFHQTtFQUNFLGdCQUFnQjtFQUNoQixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxXQUFXO0VBQ1gsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsU0FBUztBQUNYOzs7Ozs7O0FBT0E7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtFQUN2Qix1QkFBdUI7RUFDdkIsWUFBWTtFQUNaLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIseUJBQXlCO0FBQzNCOztBQUVBO0lBQ0ksZ0JBQWdCO0lBQ2hCLHNCQUFzQjtBQUMxQjs7QUFFQTtFQUNFLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsbUJBQW1CO0VBQ25CLDJCQUEyQjtFQUMzQixlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsaUJBQWlCO0FBQ25COztBQUVBO0VBQ0UsWUFBWTtFQUNaLHlCQUF5QjtFQUN6QixrQkFBa0I7RUFDbEIsd0JBQXdCO0VBQ3hCLGFBQWE7RUFDYixvQkFBb0I7RUFDcEIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsNkJBQTZCO0VBQzdCLDRCQUE0QjtFQUM1QixZQUFZO0VBQ1osZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLHlCQUF5QjtFQUN6QixvQkFBb0I7QUFDdEI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLHVCQUF1QjtBQUN6QiIsInNvdXJjZXNDb250ZW50IjpbIi5yZWNpcGUtbGlzdCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gIGZsZXgtd3JhcDogd3JhcDtcclxufVxyXG5cclxuQG1lZGlhIChtYXgtd2lkdGg6IDU4MHB4KSB7XHJcbiAgLnJlY2lwZS1saXN0IHtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gIH1cclxufVxyXG5cclxuXHJcblxyXG5cclxuLnJlY2lwZS1jYXJkIHtcclxuICB3aWR0aDogMzElO1xyXG4gIG1pbi13aWR0aDogMjQwcHg7XHJcbiAgbWFyZ2luOiAxJTtcclxuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDE2MCwxNjAsMTYwLDAuMik7XHJcbiAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgYm9yZGVyLXJhZGl1czogMCAwIDJweCAycHg7XHJcbiAgYm94LXNoYWRvdzogMCAycHggMnB4IDAgcmdiYSgwLDAsMCwwLjE0KSwgMCAxcHggNXB4IDAgcmdiYSgwLDAsMCwwLjEyKSwgMCAzcHggMXB4IC0ycHggcmdiYSgwLDAsMCwwLjIpO1xyXG59XHJcblxyXG5cclxuLnJlY2lwZS1jYXJkLWNvbnRlbnQge1xyXG4gIHBhZGRpbmc6IDE2cHg7XHJcbn1cclxuXHJcblxyXG4ucmVjaXBlLWNhcmQtaW1hZ2Uge1xyXG4gIG92ZXJmbG93OiBoaWRkZW47XHJcbiAgaGVpZ2h0OiA1MCU7XHJcbn1cclxuXHJcbi5yZWNpcGUtY2FyZCBpbWcge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1heC1oZWlnaHQ6IDI1MHB4O1xyXG59XHJcblxyXG4ucmVjaXBlLXRpdGxlIHtcclxuICBtYXJnaW46IDA7XHJcbn1cclxuXHJcblxyXG5cclxuXHJcblxyXG5cclxuLnJlY2lwZS1mb3JtIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgbWFyZ2luOiAxMHB4O1xyXG4gIHBhZGRpbmc6IDE1cHg7XHJcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICBib3JkZXI6IDdweCBzb2xpZCAjMmMzZTUwO1xyXG59XHJcblxyXG4ucmVjaXBlLWZvcm0gaW5wdXRbdHlwZT10ZXh0XSB7XHJcbiAgICBwYWRkaW5nOiA1cHggOHB4O1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxufVxyXG5cclxuLnJlY2lwZS1mb3JtLWxpbmUge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGp1c3RpZnktY29udGVudDogZmxleC1zdGFydDtcclxuICBtYXJnaW4tdG9wOiA1cHg7XHJcbn1cclxuXHJcbi5yZWNpcGUtZm9ybS1saW5lIGlucHV0IHtcclxuICBtYXJnaW4tbGVmdDogMTVweDtcclxufVxyXG5cclxuLmJ1dHRvbnMge1xyXG4gIGNvbG9yOiB3aGl0ZTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMmMzZTUwO1xyXG4gIGJvcmRlci1yYWRpdXM6IDZweDtcclxuICBwYWRkaW5nOiAwIDEwcHggMXB4IDEwcHg7XHJcbiAgbWFyZ2luOiA4cHggMDtcclxuICBhbGlnbi1zZWxmOiBmbGV4LWVuZDtcclxuICBmb250LXNpemU6IDEuMWVtO1xyXG59XHJcblxyXG4uY2xvc2UtYnV0dG9uIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xyXG4gIGJvcmRlcjogbm9uZTtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICBmb250LXNpemU6IDAuOWVtO1xyXG4gIGNvbG9yOiAjNzc3O1xyXG4gIHRleHQtc2hhZG93OiAwIDFweCAwICNmZmY7XHJcbiAgYWxpZ24tc2VsZjogZmxleC1lbmQ7XHJcbn1cclxuXHJcbi5yZWNpcGUtZm9ybS1jb250YWluZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class="App">
+      <h1 style="display: flex; justify-content: center;">My Recipes</h1>
+      <div class="recipe-form-container">
+        <form class="recipe-form"><button type="button" class="close-button">X</button>
+          <div class="recipe-form-line"><label for="recipe-title-input">Title</label><input id="recipe-title-input"
+              name="title" type="text" size="42" autocomplete="off" value=""></div><label
+            for="recipe-instructions-input" style="margin-top: 5px;">Instructions</label><textarea
+            id="recipe-instructions-input" type="Instructions" name="instructions" rows="8" cols="50"
+            autocomplete="off"></textarea>
+          <div class="recipe-form-line"><label>1.<input type="text" name="ingredient-0" size="45" autocomplete="off"
+                placeholder=" Ingredient" value=""></label></div><button type="button" class="buttons">+</button>
+          <div class="recipe-form-line"><label for="recipe-img-input">Image Url</label><input id="recipe-img-input"
+              type="text" placeholder="" name="img" size="36" autocomplete="off" value=""></div><button type="submit"
+            class="buttons" style="align-self: flex-end; margin-right: 0px;">SAVE</button>
+        </form>
+      </div>
+      <hr>
+      <div class="recipe-list">
+        <div class="recipe-card">
+          <div class="recipe-card-img"><img src="spaghetti.jpg" alt="Spaghetti"></div>
+          <div class="recipe-card-content">
+            <h3 class="recipe-title">Spaghetti</h3>
+            <h4>Ingredients:</h4>
+            <ul>
+              <li>pasta</li>
+              <li>8 cups water</li>
+              <li>1 box spaghetti</li>
+            </ul>
+            <h4>Instructions:</h4>
+            <p>Open jar of Spaghetti sauce. Bring to simmer. Boil water. Cook pasta until done. Combine pasta and sauce
+            </p><button type="button">DELETE</button>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="recipe-card-img"><img src="milkshake.jpg" alt="Milkshake"></div>
+          <div class="recipe-card-content">
+            <h3 class="recipe-title">Milkshake</h3>
+            <h4>Ingredients:</h4>
+            <ul>
+              <li>2 Scoops Ice cream</li>
+              <li>8 ounces milk</li>
+            </ul>
+            <h4>Instructions:</h4>
+            <p>Combine ice cream and milk. Blend until creamy</p><button type="button">DELETE</button>
+          </div>
+        </div>
+        <div class="recipe-card">
+          <div class="recipe-card-img"><img src="avocado_toast.jpg" alt="Avocado Toast"></div>
+          <div class="recipe-card-content">
+            <h3 class="recipe-title">Avocado Toast</h3>
+            <h4>Ingredients:</h4>
+            <ul>
+              <li>2 slices of bread</li>
+              <li>1 avocado</li>
+              <li>1 tablespoon olive oil</li>
+              <li>1 pinch of salt</li>
+              <li>pepper</li>
+            </ul>
+            <h4>Instructions:</h4>
+            <p>Toast bread. Slice avocado and spread on bread. Add salt, oil, and pepper to taste.</p><button
+              type="button">DELETE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+    This HTML file is a template.
+    If you open it directly in the browser, you will see an empty page.
+
+    You can add webfonts, meta tags, or analytics to this file.
+    The build step will place the bundled scripts into the <body> tag.
+
+    To begin the development, run `npm start` or `yarn start`.
+    To create a production bundle, use `npm run build` or `yarn build`.
+  -->
+
+
+</body>

@@ -1,18 +1,29 @@
+---
 export async function getStaticPaths() {
-    const posts = await fetchBlogPosts('http://localhost:3000/api/users'); // Assume this function fetches your blog posts
-    const data = await posts.json();
-    return posts.map((post) => ({
-      params: { slug: post.slug },
-      props: { post },
-    }));
-  }
+   return [
+     { params: { slug : "67e1a7c3eeac3c38089743b2" }},
+     { params: { slug : "67e1c038eeac3c38089743b4" }},
+     { params: { slug : "67e22d82eeac3c38089743b8" }},
+     { params: { slug : "67e22ebaeeac3c38089743bb" }},
+     { params: { slug : "67e2d082eeac3c38089743c4" }},
+     { params: { slug : "67e2d390eeac3c38089743d9" }},
+     { params: { slug : "67e2def4eeac3c38089743ff" }},
+   ];
+}
+let my = [
+     "67e1a7c3eeac3c38089743b2",
+     "67e1c038eeac3c38089743b4",
+     "67e22d82eeac3c38089743b8",
+     "67e22ebaeeac3c38089743bb",
+     "67e2d082eeac3c38089743c4",
+     "67e2d390eeac3c38089743d9",
+     "67e2def4eeac3c38089743ff",
+]
+  const { id } = Astro.props;
+  console.log(Astro.props)
+  ---
+<div>Good dog, </div>
+<div>
+  {Astro.props}
+</div>
   
-  const { post } = Astro.props;
-  
-  <h1>{post.title}</h1>
-  <p>{post.content}</p>
-  
-  <!-- router.route('/api/posts/photo/:postId')
-  .get(postCtrl.photo) -->
-  <!-- http://localhost:3000/api/v2/posts/by/67e22d82eeac3c38089743b8 -->
-  <!-- https://www.reddit.com/r/astrojs/comments/1gwr0tk/passing_props_from_parent_layout_to_child_in_slot/ -->

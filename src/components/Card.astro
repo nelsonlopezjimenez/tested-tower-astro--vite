@@ -1,0 +1,19 @@
+---
+
+---
+<ul class="flex flex-wrap justify-between"  >
+    <div class="w-80">
+        {
+          data.map((person) => (   
+  
+            <li class="flex-col pt-3 pb-3 text-lg sm:pl-10 md:flex  hover:bg-indigo-500 font-semibold border-[1vw] justify-items-center ">
+              <img class="border-[1vw] " src={`data:${person.photo.contentType};base64, ${Buffer.from(person.photo.data.data, 'binary').toString('base64')}`} alt={person.photo.contentType} width="80px"/>
+            <span class="m-2">{person._id}</span>         
+            <span class="m-2"><a href={`http://localhost:3000/api/v2/posts/by/${person._id}`}>{person.name}</a></span> 
+            <a href={`/posts/by/${person._id}`}>{person.name}</a></span> 
+            <span class="m-2">{person.email}</span>
+            </li>
+          ))
+        }
+
+   </ul>

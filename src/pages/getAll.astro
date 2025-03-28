@@ -6,11 +6,17 @@ import AllPhotos from '../components/AllPhotos.astro';
 import AllPhotosTable from '../components/AllPhotosTable.astro';
 import NavbarLi from '../components/NavbarLi.astro'
 import "../styles/global.css"
----
 
+
+---
+<style>
+	.red {
+	  color: red;
+	}
+  </style>
 <Layout>
 	<NavbarLi />
 	<AllPhotos />
 	<AllPhotosTable />
-
+  
 </Layout>

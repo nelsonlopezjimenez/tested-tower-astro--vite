@@ -1,0 +1,18 @@
+export async function getStaticPaths() {
+    const posts = await fetchBlogPosts('http://localhost:3000/api/users'); // Assume this function fetches your blog posts
+    const data = await posts.json();
+    return posts.map((post) => ({
+      params: { slug: post.slug },
+      props: { post },
+    }));
+  }
+  
+  const { post } = Astro.props;
+  
+  <h1>{post.title}</h1>
+  <p>{post.content}</p>
+  
+  <!-- router.route('/api/posts/photo/:postId')
+  .get(postCtrl.photo) -->
+  <!-- http://localhost:3000/api/v2/posts/by/67e22d82eeac3c38089743b8 -->
+  <!-- https://www.reddit.com/r/astrojs/comments/1gwr0tk/passing_props_from_parent_layout_to_child_in_slot/ -->
